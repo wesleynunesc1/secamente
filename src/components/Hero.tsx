@@ -4,12 +4,12 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 function ExperienceIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="7" r="4" stroke="#FFFFFF" strokeWidth="1.4" />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="7" r="3.8" stroke="#FFFFFF" strokeWidth="1.25" />
       <path
-        d="M4 21c0-4.418 3.582-8 8-8s8 3.582 8 8"
+        d="M4.5 20.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5"
         stroke="#FFFFFF"
-        strokeWidth="1.4"
+        strokeWidth="1.25"
         strokeLinecap="round"
       />
     </svg>
@@ -18,24 +18,24 @@ function ExperienceIcon() {
 
 function MobileIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-      <rect x="6" y="2" width="12" height="20" rx="3" stroke="#FFFFFF" strokeWidth="1.4" />
-      <path d="M10 5h4" stroke="#FFFFFF" strokeWidth="1.4" strokeLinecap="round" />
-      <circle cx="12" cy="18" r="1" fill="#FFFFFF" />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <rect x="6.5" y="2.5" width="11" height="19" rx="2.8" stroke="#FFFFFF" strokeWidth="1.25" />
+      <path d="M10 5.5h4" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+      <circle cx="12" cy="18" r="0.8" fill="#FFFFFF" />
     </svg>
   );
 }
 
 function LeafIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path
-        d="M12 2C12 2 5 7 5 14C5 17.866 8.134 21 12 21C15.866 21 19 17.866 19 14C19 7 12 2 12 2Z"
+        d="M12 2.5C12 2.5 5.5 7.2 5.5 13.8C5.5 17.4 8.4 20.5 12 20.5C15.6 20.5 18.5 17.4 18.5 13.8C18.5 7.2 12 2.5 12 2.5Z"
         stroke="#FFFFFF"
-        strokeWidth="1.4"
+        strokeWidth="1.25"
       />
-      <path d="M12 7v10" stroke="#FFFFFF" strokeWidth="1.3" strokeLinecap="round" />
-      <path d="M12 11c-2 2-3 4-3 6" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+      <path d="M12 7.5v9" stroke="#FFFFFF" strokeWidth="1.15" strokeLinecap="round" />
+      <path d="M12 11.2c-1.8 1.8-2.6 3.6-2.6 5.3" stroke="#FFFFFF" strokeWidth="1.1" strokeLinecap="round" />
     </svg>
   );
 }
@@ -48,8 +48,8 @@ const glassCards = [
   },
   {
     Icon: MobileIcon,
-    line1: "Acesso no",
-    line2: "seu celular",
+    line1: "Acesso 24h",
+    line2: "no seu celular",
   },
   {
     Icon: LeafIcon,
@@ -74,50 +74,50 @@ export default function Hero() {
       style={{
         position: "relative",
         width: "100%",
-        minHeight: "88vh",
+        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        backgroundColor: "#073530",
-        padding: "115px 0 60px",
+        backgroundColor: "#06221E",
+        padding: "105px 0 55px",
       }}
       aria-label="Apresentação Secamente"
     >
-      {/* 1. Full-bleed Hero Photo */}
+      {/* 1. Cinematic Full-bleed Photograph */}
       <img
-        src="/images/hero-banner.png"
-        alt="Sabrina Ketolly – Nutricionista Secamente"
+        src="/images/hero-editorial.jpg"
+        alt="Sabrina Ketolly – Nutrição que cabe na sua vida"
         style={{
           position: "absolute",
           inset: 0,
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: "62% 28%",
+          objectPosition: "58% 46%",
           zIndex: 1,
           pointerEvents: "none",
         }}
       />
 
-      {/* 2. Editorial Horizontal Gradient (Solid brand green on left for text legibility, clear center, subtle vignette on right) */}
+      {/* 2. Delicate Editorial Reading Gradient (Only on the left, fades completely before woman's face) */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(90deg, #073530 0%, rgba(7, 53, 48, 0.95) 28%, rgba(7, 53, 48, 0.62) 48%, rgba(7, 53, 48, 0.12) 66%, rgba(7, 53, 48, 0.42) 86%, rgba(7, 53, 48, 0.65) 100%)",
+            "linear-gradient(90deg, rgba(6, 24, 21, 0.82) 0%, rgba(6, 24, 21, 0.65) 24%, rgba(6, 24, 21, 0.32) 42%, rgba(6, 24, 21, 0.06) 55%, transparent 68%)",
           zIndex: 2,
           pointerEvents: "none",
         }}
       />
 
-      {/* 3. Top and Bottom Ambient Vignette (ensures Header contrast and smooth transition to next section) */}
+      {/* 3. Subtle Ambient Vignette (Top for header contrast, bottom for smooth transition) */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(7, 43, 39, 0.6) 0%, transparent 20%, transparent 76%, rgba(7, 43, 39, 0.85) 100%)",
+            "linear-gradient(180deg, rgba(5, 20, 18, 0.48) 0%, transparent 18%, transparent 80%, rgba(5, 20, 18, 0.65) 100%)",
           zIndex: 3,
           pointerEvents: "none",
         }}
@@ -130,27 +130,60 @@ export default function Hero() {
           zIndex: 10,
           maxWidth: 1240,
           margin: "0 auto",
-          padding: "0 28px",
+          padding: "0 32px",
           width: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          minHeight: "68vh",
+          minHeight: "72vh",
         }}
         className="hero-main-flex"
       >
         {/* Left Column: Headlines & CTA */}
         <div style={{ maxWidth: 480 }} className="hero-text-col">
+          {/* Eyebrow */}
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              marginBottom: 14,
+            }}
+          >
+            <span
+              style={{
+                width: 14,
+                height: 1.5,
+                background: "rgba(255, 255, 255, 0.65)",
+                borderRadius: 1,
+                display: "inline-block",
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "rgba(255, 255, 255, 0.8)",
+              }}
+            >
+              NUTRIÇÃO QUE
+            </span>
+          </div>
+
           {/* Editorial Big Heading */}
           <h1
             style={{
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: "clamp(42px, 4.4vw, 58px)",
+              fontSize: "clamp(42px, 4.5vw, 60px)",
               fontWeight: 400,
               color: "#FFFFFF",
-              lineHeight: 1.08,
+              lineHeight: 1.07,
               marginBottom: 20,
-              letterSpacing: "-0.01em",
+              letterSpacing: "-0.015em",
+              textShadow: "0 2px 18px rgba(0, 0, 0, 0.28)",
             }}
           >
             Nutrição que
@@ -176,8 +209,9 @@ export default function Hero() {
               fontSize: 15,
               lineHeight: 1.7,
               color: "rgba(255, 255, 255, 0.88)",
-              maxWidth: 390,
+              maxWidth: 395,
               marginBottom: 32,
+              textShadow: "0 1px 8px rgba(0, 0, 0, 0.22)",
             }}
           >
             Seu acompanhamento nutricional prático, próximo e pensado para a rotina real da mulher.
@@ -191,29 +225,29 @@ export default function Hero() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 10,
-                background: "#4E857D",
+                background: "#4A827B",
                 color: "#FFFFFF",
-                border: "none",
+                border: "1px solid rgba(255, 255, 255, 0.18)",
                 padding: "13px 28px",
                 borderRadius: 999,
-                fontSize: 14,
+                fontSize: 13.5,
                 fontWeight: 600,
                 fontFamily: "'Inter', sans-serif",
                 cursor: "pointer",
-                boxShadow: "0 6px 20px rgba(0, 0, 0, 0.28)",
-                transition: "all 0.3s ease",
+                boxShadow: "0 6px 22px rgba(0, 0, 0, 0.25)",
+                transition: "all 0.28s ease",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLButtonElement;
-                el.style.background = "#5E9B93";
+                el.style.background = "#57968E";
                 el.style.transform = "translateY(-2px)";
-                el.style.boxShadow = "0 8px 24px rgba(78, 133, 125, 0.4)";
+                el.style.boxShadow = "0 8px 26px rgba(74, 130, 123, 0.4)";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLButtonElement;
-                el.style.background = "#4E857D";
+                el.style.background = "#4A827B";
                 el.style.transform = "translateY(0)";
-                el.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.28)";
+                el.style.boxShadow = "0 6px 22px rgba(0, 0, 0, 0.25)";
               }}
               aria-label="Quero começar o Secamente"
             >
@@ -235,8 +269,8 @@ export default function Hero() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 11.5,
-              letterSpacing: "0.1em",
-              color: "rgba(255, 255, 255, 0.62)",
+              letterSpacing: "0.08em",
+              color: "rgba(255, 255, 255, 0.65)",
               marginTop: 26,
             }}
           >
@@ -244,14 +278,14 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Right Column: 3 Transparent Glass Cards Stacked on the Right Edge (Desktop) */}
+        {/* Right Column: 3 Discreet Refined Glass Cards Stacked on the Right Edge (Desktop) */}
         <div
           className="hero-glass-desktop"
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 14,
-            width: 220,
+            gap: 12,
+            width: 182,
             zIndex: 5,
           }}
         >
@@ -259,37 +293,37 @@ export default function Hero() {
             <div
               key={card.line1 + card.line2}
               style={{
-                background: "rgba(10, 48, 43, 0.48)",
-                backdropFilter: "blur(14px)",
-                WebkitBackdropFilter: "blur(14px)",
-                border: "1px solid rgba(255, 255, 255, 0.22)",
-                borderRadius: 16,
-                padding: "13px 18px",
+                background: "rgba(255, 255, 255, 0.08)",
+                backdropFilter: "blur(16px)",
+                WebkitBackdropFilter: "blur(16px)",
+                border: "1px solid rgba(255, 255, 255, 0.16)",
+                borderRadius: 14,
+                padding: "11px 15px",
                 display: "flex",
                 alignItems: "center",
-                gap: 12,
-                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.22)",
-                transition: "all 0.3s ease",
+                gap: 11,
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.16)",
+                transition: "all 0.28s ease",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLDivElement;
-                el.style.background = "rgba(10, 48, 43, 0.65)";
-                el.style.borderColor = "rgba(255, 255, 255, 0.35)";
-                el.style.transform = "translateX(-4px)";
+                el.style.background = "rgba(255, 255, 255, 0.14)";
+                el.style.borderColor = "rgba(255, 255, 255, 0.32)";
+                el.style.transform = "translateX(-3px)";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLDivElement;
-                el.style.background = "rgba(10, 48, 43, 0.48)";
-                el.style.borderColor = "rgba(255, 255, 255, 0.22)";
+                el.style.background = "rgba(255, 255, 255, 0.08)";
+                el.style.borderColor = "rgba(255, 255, 255, 0.16)";
                 el.style.transform = "translateX(0)";
               }}
             >
               <div
                 style={{
-                  width: 34,
-                  height: 34,
+                  width: 30,
+                  height: 30,
                   borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.14)",
+                  background: "rgba(255, 255, 255, 0.12)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -303,16 +337,17 @@ export default function Hero() {
                   style={{
                     color: "#FFFFFF",
                     fontFamily: "'Inter', sans-serif",
-                    fontSize: 12.5,
+                    fontSize: 12,
                     fontWeight: 600,
                     lineHeight: 1.25,
+                    letterSpacing: "-0.01em",
                   }}
                 >
                   {card.line1}
                 </span>
                 <span
                   style={{
-                    color: "rgba(255, 255, 255, 0.85)",
+                    color: "rgba(255, 255, 255, 0.8)",
                     fontFamily: "'Inter', sans-serif",
                     fontSize: 11,
                     fontWeight: 400,
@@ -327,15 +362,15 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Mobile Glass Cards Carousel below content */}
+      {/* Mobile Glass Cards Horizontal Scroll below content */}
       <div
         className="hero-glass-mobile"
         style={{
           display: "none",
           position: "relative",
           zIndex: 10,
-          padding: "24px 20px 30px",
-          gap: 12,
+          padding: "20px 20px 24px",
+          gap: 10,
           overflowX: "auto",
           width: "100%",
         }}
@@ -344,25 +379,25 @@ export default function Hero() {
           <div
             key={card.line1 + card.line2}
             style={{
-              background: "rgba(10, 48, 43, 0.65)",
+              background: "rgba(6, 28, 24, 0.72)",
               backdropFilter: "blur(14px)",
               WebkitBackdropFilter: "blur(14px)",
-              border: "1px solid rgba(255, 255, 255, 0.22)",
-              borderRadius: 14,
-              padding: "12px 18px",
+              border: "1px solid rgba(255, 255, 255, 0.18)",
+              borderRadius: 13,
+              padding: "10px 14px",
               display: "flex",
               alignItems: "center",
-              gap: 12,
+              gap: 10,
               flexShrink: 0,
-              minWidth: 190,
+              minWidth: 165,
             }}
           >
             <div
               style={{
-                width: 32,
-                height: 32,
+                width: 28,
+                height: 28,
                 borderRadius: "50%",
-                background: "rgba(255, 255, 255, 0.14)",
+                background: "rgba(255, 255, 255, 0.12)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -376,7 +411,7 @@ export default function Hero() {
                 style={{
                   color: "#FFFFFF",
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: 12.5,
+                  fontSize: 12,
                   fontWeight: 600,
                 }}
               >
@@ -384,9 +419,9 @@ export default function Hero() {
               </span>
               <span
                 style={{
-                  color: "rgba(255, 255, 255, 0.85)",
+                  color: "rgba(255, 255, 255, 0.8)",
                   fontFamily: "'Inter', sans-serif",
-                  fontSize: 11,
+                  fontSize: 10.5,
                 }}
               >
                 {card.line2}
@@ -402,7 +437,7 @@ export default function Hero() {
             flex-direction: column !important;
             align-items: flex-start !important;
             min-height: auto !important;
-            padding-top: 10px !important;
+            padding-top: 20px !important;
           }
           .hero-text-col {
             max-width: 100% !important;

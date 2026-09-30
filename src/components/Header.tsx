@@ -101,13 +101,16 @@ export default function Header() {
         <nav
           className="header-nav-desktop"
           style={{
-            background: "#FFFFFF",
+            background: "rgba(255, 255, 255, 0.95)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
             borderRadius: 999,
-            padding: "5px 10px",
+            padding: "4px 6px",
             display: "flex",
             alignItems: "center",
             gap: 2,
-            boxShadow: "0 4px 18px rgba(0, 0, 0, 0.12)",
+            boxShadow: "0 6px 20px rgba(0, 0, 0, 0.08)",
+            border: "1px solid rgba(255, 255, 255, 0.6)",
           }}
         >
           {navItems.map((item) => (
@@ -117,14 +120,14 @@ export default function Header() {
               style={{
                 background: "none",
                 border: "none",
-                padding: "8px 18px",
+                padding: "6px 14px",
                 borderRadius: 999,
-                fontSize: 13,
+                fontSize: 12.5,
                 fontWeight: 500,
-                color: "#102722",
+                color: "#182E29",
                 fontFamily: "'Inter', sans-serif",
                 cursor: "pointer",
-                transition: "all 0.25s ease",
+                transition: "all 0.22s ease",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLButtonElement;
@@ -134,7 +137,7 @@ export default function Header() {
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLButtonElement;
                 el.style.background = "none";
-                el.style.color = "#102722";
+                el.style.color = "#182E29";
               }}
             >
               {item.label}
@@ -152,27 +155,29 @@ export default function Header() {
             gap: 8,
             background: "#073F39",
             color: "#FFFFFF",
-            border: "1px solid rgba(255, 255, 255, 0.2)",
-            padding: "11px 24px",
+            border: "1px solid rgba(255, 255, 255, 0.22)",
+            padding: "9px 20px",
             borderRadius: 999,
-            fontSize: 13,
+            fontSize: 12.5,
             fontWeight: 600,
             fontFamily: "'Inter', sans-serif",
             cursor: "pointer",
             transition: "all 0.25s ease",
-            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.15)",
+            boxShadow: "0 4px 16px rgba(0, 0, 0, 0.16)",
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.background = "#0e5a52";
+            (e.currentTarget as HTMLButtonElement).style.background = "#0c544d";
             (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-1px)";
+            (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(7, 63, 57, 0.35)";
           }}
           onMouseLeave={(e) => {
             (e.currentTarget as HTMLButtonElement).style.background = "#073F39";
             (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)";
+            (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.16)";
           }}
         >
           Quero começar
-          <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
             <path
               d="M3 8h10M9 4l4 4-4 4"
               stroke="currentColor"
