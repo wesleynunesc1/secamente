@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark-green: #073F39;
+  --color-secamente: #639B95;
+  --color-soft-green: #8DBDB5;
+  --color-offwhite: #F5F2EA;
+  --color-text: #102722;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-offwhite);
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-offwhite); }
+::-webkit-scrollbar-thumb { background: var(--color-secamente); border-radius: 3px; }
+
+/* ===================== KEYFRAMES ===================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(0.5deg); }
+}
+
+/* ===================== ANIMATION UTILITIES ===================== */
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-subtle-float { animation: subtleFloat 8s ease-in-out infinite; }
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.animate-fade-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease forwards;
+}
+.animate-fade-right {
+  opacity: 0;
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+/* ===================== SCROLL REVEAL ===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(36px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* Delay utilities */
+.delay-100 { transition-delay: 0.10s; }
+.delay-200 { transition-delay: 0.20s; }
+.delay-300 { transition-delay: 0.30s; }
+.delay-400 { transition-delay: 0.40s; }
+.delay-500 { transition-delay: 0.50s; }
+
+/* ===================== BUTTON ===================== */
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.3s ease;
+}
+.btn-arrow:hover { gap: 14px; }
+
+/* ===================== GLASS ===================== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+/* ===================== PHONE SHADOW ===================== */
+.phone-shadow {
+  filter: drop-shadow(0 24px 48px rgba(7, 63, 57, 0.45));
+}
+
+/* ===================== EYEBROW ===================== */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ===================== SECTION HEIGHTS ===================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+  overflow: hidden;
+}
+
+.full-cover-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===================== TESTIMONIALS SLIDER ===================== */
+.testimonials-slider {
+  overflow: hidden;
+}
+
+/* ===================== RESPONSIVE HELPERS ===================== */
+@media (max-width: 1024px) {
+  .sticky { position: static !important; }
+}
